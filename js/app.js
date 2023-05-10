@@ -75,3 +75,67 @@ typeProducts.forEach(typeProduct => {
             });
     });
 });
+
+const getBrand = async() => {
+    const url = `http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl`
+
+    const res = await fetch(url);
+    const data = await res.json();
+     console.log(data)
+    return data
+
+}
+
+getBrand()
+const criarCards = (produto) => {
+
+  
+    const card = document.createElement("div");
+    card.classList.add("container_all_products");
+  
+    const product = document.createElement("div");
+    product.classList.add("product");
+  
+    const imgInfo = document.createElement("div");
+    imgInfo.classList.add("img_info");
+  
+    const img = document.createElement("img");
+    img.classList.add("img_product");
+    img.src = produto.image_link;
+    img.alt = "";
+  
+    const info = document.createElement("div");
+    info.classList.add("info");
+  
+    const name = document.createElement("span");
+    name.classList.add("name");
+    name.textContent = produto.name;
+  
+    const price = document.createElement("span");
+    price.classList.add("price");
+    price.textContent = `preço: $${produto.price}`;
+  
+    const description = document.createElement("div");
+    description.classList.add("description");
+    description.textContent = produto.description;
+  
+    info.append(name, price);
+    imgInfo.append(img, info);
+    product.append(imgInfo, description);
+    card.appendChild(product);
+  
+    return card;
+  };
+  const carregarTodosProdutos = async(product) => {
+    console.log(product)
+    const container = document.getElementById('container_all_products')
+    const cards = await product.map(criarCards)
+
+
+
+    container.replaceChildren(...cards)
+
+}
+
+getBrand().then(carregarTodosProdutos);
+
