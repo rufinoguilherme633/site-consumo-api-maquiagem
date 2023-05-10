@@ -226,7 +226,12 @@ main .product_selecioned {
     align-items: center;
     margin-bottom: 30px;
   }
-  
+  .description {
+      color:black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+     
+    }
   .img_info {
     display: flex;
     align-items: center;
