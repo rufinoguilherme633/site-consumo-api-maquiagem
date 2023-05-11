@@ -17,6 +17,7 @@ header {
     height: 10vh;
     align-items: center;
     border-bottom: 3px solid #6b6665;
+    background-color:#ffbcca;
 }
 
 .fa-solid {
