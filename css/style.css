@@ -35,6 +35,9 @@ header {
     height: max-content;
 }
 
+a, h1{
+    text-decoration: none;
+}
 .image_logo {
     height: 70px;
     width: 80px;
@@ -239,6 +242,9 @@ main .product_selecioned {
     color: black;
     margin-top: 10px;
     margin-bottom: 10px;
+
+    max-width: 30vw;
+    max-height: max-content;
 }
 
 .img_info {
@@ -255,21 +261,26 @@ main .product_selecioned {
 .info {
     display: flex;
     flex-direction: column;
+    gap: 4vh;
 }
 
 .name {
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-weight: bold;
     margin-bottom: 10px;
     color: palevioletred;
     text-decoration: none;
     text-decoration: none;
     color: palevioletred;
+  
+    max-height: 5vh;
+    max-width: 10vw;
 }
 
 .particles {
     font-size: 18px;
     margin-bottom: 10px;
+   
 }
 
 
