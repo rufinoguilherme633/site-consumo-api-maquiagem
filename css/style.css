@@ -99,7 +99,7 @@ main .product_selecioned {
 
 .image {
     height: 300px;
-    width: 350px;
+    width: 300px;
 }
 
 .sobre_nos {
@@ -110,11 +110,12 @@ main .product_selecioned {
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+    padding: 30px;
 }
 
 .text_sobre_nos {
     width: 40vw;
-    height: 40vh;
+    /* height: 40vh; */
     display: flex;
     align-items: center;
     font-size: 1.8rem;
@@ -293,4 +294,17 @@ main .product_selecioned {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+
+@media(max-width: 950px) {
+    .sobre_nos {
+     flex-direction: column;
+     max-height: max-content;
+    }
+    .text_sobre_nos {
+        height: max-contents;
+        /* background-color: aqua; */
+    }
+    
 }
